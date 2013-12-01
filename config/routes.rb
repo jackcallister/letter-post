@@ -1,6 +1,8 @@
 LetterPost::Application.routes.draw do
   root "letters#new"
-  resources :letters
+  resources :letters do
+    get :payment
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
